@@ -279,9 +279,6 @@ PRODUCT_PACKAGES += \
     qti-telephony-common \
     telephony-ext
 
-# Touch
-PRODUCT_PACKAGES += vendor.lineage.touch@1.0-service.libra
-
 # USB HAL
 PRODUCT_PACKAGES += android.hardware.usb@1.0-service.basic
 
