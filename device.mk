@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2020 The Pixel Experience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -92,9 +92,6 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne \
     libcnefeatureconfig \
     services-ext
-
-# EdgeGesture
-PRODUCT_PACKAGES += EdgeGesture
 
 # Fingerprint
 PRODUCT_COPY_FILES += \
@@ -198,9 +195,6 @@ PRODUCT_PACKAGES += android.hardware.keymaster@3.0-impl
 # Lights
 PRODUCT_PACKAGES += android.hardware.light@2.0-service.xiaomi_msm8994
 
-# LiveDisplay
-PRODUCT_PACKAGES += vendor.lineage.livedisplay@2.0-service-legacymm
-
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs_performance.xml:system/vendor/etc/media_codecs_performance.xml \
@@ -288,14 +282,11 @@ PRODUCT_PACKAGES += \
 # Touch
 PRODUCT_PACKAGES += vendor.lineage.touch@1.0-service.libra
 
-# Trust HAL
-PRODUCT_PACKAGES += vendor.lineage.trust@1.0-service
-
 # USB HAL
 PRODUCT_PACKAGES += android.hardware.usb@1.0-service.basic
 
 # Vibrator
-PRODUCT_PACKAGES += android.hardware.vibrator@1.0-service.lineage
+PRODUCT_PACKAGES += android.hardware.vibrator@1.0-impl
 
 # Wifi
 PRODUCT_COPY_FILES += \

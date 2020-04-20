@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2015 The Android Open-Source Project
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2020 The Pixel Experience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -69,9 +69,6 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_USE_BTNV := true
 QCOM_BT_USE_SMD_TTY := true
 WCNSS_FILTER_USES_SIBS := true
-
-# Build with SU
-WITH_SU := true
 
 # Camera
 BOARD_QTI_CAMERA_32BIT_ONLY := true
@@ -144,7 +141,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := libra_defconfig
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := /media/wjxxbsh/Data/gcc/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := /home/kyoto44/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/libra
 

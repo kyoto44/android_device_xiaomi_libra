@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2020 The Pixel Experience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_libra.mk
+    $(LOCAL_DIR)/aosp_libra.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_libra-eng \
-    lineage_libra-user \
-    lineage_libra-userdebug
+    aosp_libra-eng \
+    aosp_libra-user \
+    aosp_libra-userdebug
