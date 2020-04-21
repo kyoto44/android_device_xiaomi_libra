@@ -191,3 +191,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.enable_vds=1 \
     persist.sys.wfd.virtual=0 \
     vendor.audio.tunnel.encode=false
+
+# ADB at boot
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.service.adb.enable=1 \
+persist.service.debuggable=1 \
+persist.sys.usb.config=mtp,adb \
+ro.adb.secure=0
