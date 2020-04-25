@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_libra.mk
+    $(LOCAL_DIR)/derp_libra.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_libra-eng \
-    aosp_libra-user \
-    aosp_libra-userdebug
+    derp_libra-eng \
+    derp_libra-user \
+    derp_libra-userdebug
