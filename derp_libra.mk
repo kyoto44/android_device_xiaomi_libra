@@ -24,14 +24,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
 # Inherit some common DerpFest stuff.
 $(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-DERP_BUILD_ZIP_TYPE := GAPPS
+DERP_BUILD_ZIP_TYPE := VANILLA
 DERP_BUILDTYPE := Official
-
-ifeq ($(DERP_BUILD_ZIP_TYPE), GAPPS)
-IS_PHONE := true
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_WIFI_EXT := true
-endif
 
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/libra/device.mk)
