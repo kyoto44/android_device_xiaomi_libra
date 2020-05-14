@@ -252,7 +252,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_NAME := full_libra
+PRODUCT_NAME := aosp_libra
 PRODUCT_DEVICE := libra
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Mi-4c
@@ -270,3 +270,4 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     init.class_main.sh \
     init.qcom.post_boot.sh
+    
