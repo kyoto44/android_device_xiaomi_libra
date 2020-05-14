@@ -18,6 +18,8 @@ package org.cyanogenmod.hardware;
 
 import org.cyanogenmod.internal.util.FileUtils;
 
+import java.io.File;
+
 /*
  * Disable capacitive keys
  *
@@ -29,11 +31,10 @@ import org.cyanogenmod.internal.util.FileUtils;
 
 public class KeyDisabler {
 
-    private static String CONTROL_PATH = "/proc/touchscreen/nav_button_enable";
+    private static String CONTROL_PATH = "/sys/devices/soc.0/f9924000.i2c/i2c-2/2-0070/input/input1/0dbutton";
 
     public static boolean isSupported() {
-        return FileUtils.isFileReadable(CONTROL_PATH) &&
-            FileUtils.isFileWritable(CONTROL_PATH);
+        return FileUtils.isFileWritable(CONTROL_PATH);
     }
 
     public static boolean isActive() {
@@ -43,5 +44,4 @@ public class KeyDisabler {
     public static boolean setActive(boolean state) {
         return FileUtils.writeLine(CONTROL_PATH, (state ? "0" : "1"));
     }
-
 }
