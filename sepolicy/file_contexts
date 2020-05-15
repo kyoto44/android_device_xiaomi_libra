@@ -8,3 +8,4 @@
 
 /sys/devices/soc.0/qcom,bcl.*(/.*)?                                 u:object_r:sysfs_thermal:s0
 /sys/devices/qcom,bcl.*(/.*)?                                       u:object_r:sysfs_thermal:s0
+/system/bin/readmac               u:object_r:readmac_exec:s0
