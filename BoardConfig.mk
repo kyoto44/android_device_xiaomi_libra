@@ -155,8 +155,8 @@ BOARD_USES_QCOM_HARDWARE := true
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
-# dt2w
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/soc.0/f9924000.i2c/i2c-2/2-0070/input/input1/wake_gesture"
+# DT2W
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchscreen/double_tap_enable"
 
 # Ril
 FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
@@ -195,7 +195,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 # Assertions
 TARGET_BOARD_INFO_FILE ?= $(DEVICE_PATH)/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := 4C,libra
-
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
