@@ -28,6 +28,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
 $(call inherit-product, vendor/potato/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# Board
+PRODUCT_BOARD_PLATFORM := msm8992
+PRODUCT_USES_QCOM_HARDWARE := true
+
+BUILD_BROKEN_PHONY_TARGETS := true
+
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/libra/device.mk)
 
