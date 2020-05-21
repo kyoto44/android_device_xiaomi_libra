@@ -24,17 +24,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
 # Enable go mode
 $(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
 
-# Inherit some common Evo stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit from Potato vendor
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_BOOT_ANIMATION_RES_EVO := true
 
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/libra/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := libra
-PRODUCT_NAME := aosp_libra
+PRODUCT_NAME := potato_libra
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi-4c
 PRODUCT_MANUFACTURER := Xiaomi
