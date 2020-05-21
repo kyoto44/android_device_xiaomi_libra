@@ -37,11 +37,6 @@ on fs
     mkdir /persist/wlan_bt 0700 system system
 
 on post-fs
-    # We restorecon /cust in case the cust partition has been reset.
-    restorecon_recursive /cust
-
-    # Create the lost+found directories, so as to enforce our permissions
-    mkdir /cust/lost+found 0770 root root
 
 on post-fs-data
     mkdir /persist/data/sfs 0700 system system
