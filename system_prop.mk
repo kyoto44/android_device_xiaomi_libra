@@ -72,6 +72,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.disable_backpressure=1 \
+    debug.sf.enable_gl_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
     ro.opengles.version=196610 \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
@@ -140,7 +142,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.ssr.enable_ramdumps=0 \
     persist.sys.ssr.restart_level=modem \
-    ril.subscription.types=RUIM \
+    ril.subscription.types=NV,RUIM \
     rild.libargs=-d[SPACE]/dev/smd0 \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
