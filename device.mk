@@ -271,6 +271,11 @@ PRODUCT_PACKAGES += \
     qti-telephony-common \
     telephony-ext
 
+# TimeKeep
+PRODUCT_PACKAGES += \
+    timekeep \
+    TimeKeep
+
 # USB HAL
 PRODUCT_PACKAGES += android.hardware.usb@1.0-service.basic
 

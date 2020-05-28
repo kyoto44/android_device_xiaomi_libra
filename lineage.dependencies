@@ -1,0 +1,18 @@
+[
+  {
+    "repository": "android_kernel_xiaomi_libra",
+    "target_path": "kernel/xiaomi/libra"
+  },
+  {
+    "repository": "android_vendor_xiaomi_libra",
+    "target_path": "vendor/xiaomi/libra"
+  },
+  {
+    "repository": "android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings"
+  },
+  {
+    "repository": "android_hardware_sony_timekeep",
+    "target_path": "hardware/sony/timekeep"
+  }
+]
