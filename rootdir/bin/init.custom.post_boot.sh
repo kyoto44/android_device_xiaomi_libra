@@ -33,13 +33,13 @@ rm -f /data/system/uiderrors.txt
 rm -rf /cache/*.*
 rm -rf /cache/recovery/*
 rm -rf /data/backup/pending/*
+rm -rf /data/data/*/app_webview_*
 rm -rf /data/data/*/app_webview*/*/*/CacheStorage/*
 rm -rf /data/data/*/app_webview*/*/*/ScriptCache/*
 rm -rf /data/data/*/cache/*
 rm -rf /data/data/*/code_cache/*
 rm -rf /data/data/com.microsoft.office*/files/Microsoft/Office/*/*
-rm -rf /data/data/com.microsoft.office*/files/temp/*
-rm -rf /data/data/com.microsoft.office*/files/tempOffice/*
+rm -rf /data/data/com.microsoft.office*/files/temp*/*
 rm -rf /data/local/tmp/*
 rm -rf /data/media/0/Pictures/.thumbnails/*
 rm -rf /data/user_de/*/*/cache/*
