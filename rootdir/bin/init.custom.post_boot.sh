@@ -45,8 +45,3 @@ rm -rf /data/local/tmp/*
 rm -rf /data/media/0/Pictures/.thumbnails/*
 rm -rf /data/user_de/*/*/cache/*
 rm -rf /data/user_de/*/*/code_cache/*
-
-# Do fstrim for all partitions
-for path in /*; do
-    /system/xbin/busybox fstrim -v $path
-done
