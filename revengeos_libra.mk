@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
 
 # Inherit some common Evo stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/revengeos/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_BOOT_ANIMATION_RES_EVO := true
 
@@ -31,7 +31,7 @@ $(call inherit-product, device/xiaomi/libra/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := libra
-PRODUCT_NAME := aosp_libra
+PRODUCT_NAME := revengeos_libra
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi-4c
 PRODUCT_MANUFACTURER := Xiaomi
