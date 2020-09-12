@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     tinymix
 
+# Binder
+PRODUCT_PACKAGES += \
+    libhwbinder     
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
@@ -159,9 +163,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:system/vendor/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/vendor/etc/permissions/handheld_core_hardware.xml
 
-# IR
-PRODUCT_PACKAGES += android.hardware.ir@1.0-service.libra
-
 # IRQ
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
@@ -213,9 +214,6 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
-
-# Permissions
-PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.consumerir.xml:system/vendor/etc/permissions/android.hardware.consumerir.xml
 
 # Power
 PRODUCT_PACKAGES += android.hardware.power@1.2-service-qti
