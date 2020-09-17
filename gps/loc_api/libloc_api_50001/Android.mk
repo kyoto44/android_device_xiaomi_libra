@@ -45,8 +45,8 @@ LOCAL_C_INCLUDES:= \
     $(LOCAL_PATH) \
     $(TARGET_OUT_HEADERS)/libflp
 
-LOCAL_COPY_HEADERS_TO:= libloc_eng/
-LOCAL_COPY_HEADERS:= \
+LOCAL_EXPORT_C_INCLUDE_DIRS := libloc_eng/
+LOCAL_EXPORT_SHARED_LIBRARY_HEADERS := \
    LocEngAdapter.h \
    loc.h \
    loc_eng.h \
