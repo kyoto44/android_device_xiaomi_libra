@@ -182,17 +182,3 @@ persist.service.adb.enable=1 \
 persist.service.debuggable=1 \
 persist.sys.usb.config=mtp,adb \
 ro.adb.secure=0
-
-PRODUCT_PROPERTY_OVERRIDES += \
-dalvik.vm.heapstartsize=16m \
-dalvik.vm.heapgrowthlimit=192m \
-dalvik.vm.heapsize=512m \
-dalvik.vm.heaptargetutilization=0.75 \
-dalvik.vm.heapminfree=2m \
-dalvik.vm.heapmaxfree=8m \
-ro.product.ram=2g \
-ro.product.model=Mi-4c \
-ro.vendor.product.model=Mi-4c \
-ro.product.device=libra \
-ro.vendor.product.device=libra \
-ro.build.product=libra
