@@ -43,7 +43,19 @@ on post-fs
     # Create the lost+found directories, so as to enforce our permissions
     mkdir /cust/lost+found 0770 root root
 
+service logger /system/bin/logcat -b all -D -f /data/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
 on post-fs-data
+    
+    # Clear existing log and start the service
+    rm /data/boot_log.txt
+    start logger
+
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
     mkdir /data/usf 0700 system system
@@ -90,6 +102,9 @@ on boot
     chmod 0664 /dev/cpuset/top-app/boost/tasks
 
 on property:sys.boot_completed=1
+    # Stop the logger service
+    stop logger
+
     # Set default I/O scheduler && read ahead cache size
     setprop sys.io.scheduler cfq
     write /sys/block/mmcblk0/queue/read_ahead_kb 512
