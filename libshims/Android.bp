@@ -61,7 +61,7 @@ cc_library_shared {
     vendor: true,
 
     srcs: [
-        "libcne/libcne_shim.cpp",
+        "libcne_shim.cpp",
     ],
 
     shared_libs: [
