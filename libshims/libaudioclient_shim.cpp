@@ -17,10 +17,10 @@
 #include <media/AudioSystem.h>
 
 namespace android {
-    extern "C" static uintptr_t _ZN7android11AudioSystem16addErrorCallbackEPFviE(
+    extern "C" uintptr_t _ZN7android11AudioSystem16addErrorCallbackEPFviE(
             audio_error_callback cb);
 
-    extern "C" static void _ZN7android11AudioSystem16setErrorCallbackEPFviE(
+    extern "C" void _ZN7android11AudioSystem16setErrorCallbackEPFviE(
             audio_error_callback cb) {
         _ZN7android11AudioSystem16addErrorCallbackEPFviE(cb);
     }
