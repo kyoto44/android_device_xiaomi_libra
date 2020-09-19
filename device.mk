@@ -314,5 +314,5 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libril-qc-qmi-1_shim \
-    libcne_shim
+    libaudioclient_shim \
+    libcutils_shim
