@@ -40,6 +40,9 @@ on post-fs
     # We restorecon /cust in case the cust partition has been reset.
     restorecon_recursive /cust
 
+    # Allow writing to the kernel trace log.
+    chmod 0222 /sys/kernel/debug/tracing/trace_marker
+    
     # Create the lost+found directories, so as to enforce our permissions
     mkdir /cust/lost+found 0770 root root
 
