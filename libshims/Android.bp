@@ -1,0 +1,90 @@
+#
+# Copyright (C) 2020 The Pixel Experience Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+LOCAL_PATH := $(call my-dir)
+
+
+cc_library_shared {
+    name: "libshim_atomic",
+    vendor: true,    
+
+    srcs: [
+        "atomic.cpp",
+    ],
+}
+
+cc_library_shared {
+    name: "libshim_camera",
+    vendor: true,    
+
+    srcs: [
+        "Fence.cpp",
+    ],
+}
+
+cc_library_shared {
+    name: "libshims_get_process_name",
+    vendor: true,    
+
+    srcs: [
+        "get_process_name.c",
+    ],
+}
+
+cc_library_shared {
+    name: "rild_socket",
+    vendor: true,    
+
+    srcs: [
+        "rild_socket.c",
+    ],
+}
+
+cc_library_shared {
+    name: "libril-qc-qmi-1_shim",
+    proprietary: true,
+    vendor: true,    
+
+    srcs: [
+        "libril-qc-qmi-1_shim.cpp",
+    ],
+
+    header_libs: [
+        "libaudioclient_headers",
+    ],
+    include_dirs: [
+        "system/core/base/include",
+    ],
+    shared_libs: [
+        "liblog",
+    ],
+
+}
+
+cc_library_shared {
+    name: "libcne_shim",
+    proprietary: true,
+    vendor: true,
+
+    srcs: [
+        "libcne/libcne_shim.cpp",
+    ],
+
+    shared_libs: [
+        "liblog",
+    ],
+
+}
+

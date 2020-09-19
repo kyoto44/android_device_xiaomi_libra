@@ -77,7 +77,8 @@ PRODUCT_PACKAGES += \
     camera.msm8992 \
     libshim_atomic \
     libshim_camera \
-    Snap
+    Snap \
+    libqdutils
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -124,7 +125,8 @@ PRODUCT_PACKAGES += \
     libgenlock \
     liboverlay \
     libtinyxml \
-    memtrack.msm8992
+    memtrack.msm8992 \
+    libqdMetaData
 
 # Hardware
 PRODUCT_COPY_FILES += \
@@ -300,12 +302,17 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-# # Telephony
-# PRODUCT_PACKAGES += \
-#     telephony-ext \
-#     qti-telephony-hidl-wrapper \
-#     qti_telephony_hidl_wrapper.xml \
-#     qti-telephony-utils \
-#     qti_telephony_utils.xml \
-#     ims-ext-common \
-#     ims_ext_common.xml 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    ims-ext-common \
+    ims_ext_common.xml 
+
+# Shims
+PRODUCT_PACKAGES += \
+    libril-qc-qmi-1_shim \
+    libcne_shim
