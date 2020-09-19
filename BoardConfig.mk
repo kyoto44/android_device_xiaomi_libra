@@ -176,10 +176,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
-# Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm8994
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
-
 # Ril
 FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
 TARGET_RIL_VARIANT := caf
@@ -194,16 +190,10 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Shims
-TARGET_LD_SHIM_LIBS += /system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so:/system/vendor/lib/libmmcamera2_stats_algorithm.so|libshim_atomic.so:/system/vendor/lib64/libizat_core.so|libshims_get_process_name.so:/system/vendor/lib/hw/camera.vendor.msm8992.so|libshim_camera.so
+TARGET_LD_SHIM_LIBS += /system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so:/system/vendor/lib/libmmcamera2_stats_algorithm.so|libshim_atomic.so:/system/vendor/lib64/libizat_core.so|libshims_get_process_name.so:/system/vendor/lib/hw/camera.vendor.msm8992.so|libshim_camera.so:/system/vendor/lib64/libcne.so|libcutils_shim.so:system/vendor/lib64/libril-qc-qmi-1.so|libaudioclient_shim.so
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
-
-# TWRP support
-ifeq ($(WITH_TWRP),true)
--include $(DEVICE_PATH)/twrp/twrp.mk
-RECOVERY_VARIANT := twrp
-endif
 
 # Wifi
 BOARD_USES_AOSP_WLAN_HAL := true
@@ -225,8 +215,4 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true 
-
-# Shims
-TARGET_LD_SHIM_LIBS := \
-    /system/vendor/lib64/libcne.so|libcutils_shim.so \
-    /system/vendor/lib64/libril-qc-qmi-1.so|libaudioclient_shim.so
+    
