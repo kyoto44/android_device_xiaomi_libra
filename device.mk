@@ -52,8 +52,11 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libaudio-resampler \
     libqcompostprocbundle \
-    libqcomvisualizer \ 3,560 commits
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    tinymix
 
+# Binder
 PRODUCT_PACKAGES += \
     libhwbinder     
 
