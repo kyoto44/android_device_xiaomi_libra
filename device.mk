@@ -58,7 +58,10 @@ PRODUCT_PACKAGES += \
 
 # Binder
 PRODUCT_PACKAGES += \
-    libhwbinder     
+    libhwbinder \
+    libhwbinder.vendor \
+    libhidltransport \
+    libhidltransport.vendor 
 
 # Bluetooth
 PRODUCT_PACKAGES += \
