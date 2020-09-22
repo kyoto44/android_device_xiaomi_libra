@@ -279,7 +279,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.libra
+    android.hardware.usb@1.0-service
 
 # Health HAL
 PRODUCT_PACKAGES += \
