@@ -108,7 +108,7 @@
         <version>2.0</version>
         <interface>
             <name>IHealth</name>
-            <instance>backup</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -209,15 +209,6 @@
         <version>2.0</version>
         <interface>
             <name>ISoundTriggerHw</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.usb</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IUsb</name>
             <instance>default</instance>
         </interface>
     </hal>

@@ -273,8 +273,13 @@ PRODUCT_PACKAGES += \
     timekeep \
     TimeKeep
 
-# USB HAL
-PRODUCT_PACKAGES += android.hardware.usb@1.0-service.basic
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# Health HAL
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-service.libra
 
 # Vibrator HAL
 PRODUCT_PACKAGES += \
