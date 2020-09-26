@@ -29,7 +29,6 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_CORTEX_A53 := true
 TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := generic
-TARGET_USES_64_BIT_BINDER := true
 
 
 # Assertions
