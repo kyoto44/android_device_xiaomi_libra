@@ -49,14 +49,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.button_jack_profile=volume \
     persist.sys.button_jack_switch=0
 
-# Dexpreopt
+# Dex
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.dex2oat64.enabled=true \
     dalvik.vm.image-dex2oat-filter=speed \
-    pm.dexopt.bg-dexopt=speed \
-    pm.dexopt.boot=speed \
-    pm.dexopt.first-boot=speed \
-    pm.dexopt.install=speed
+    ro.sys.fw.dex2oat_thread_count=6 \
+    dalvik.vm.boot-dex2oat-threads=6 \
+    dalvik.vm.dex2oat-threads=4 \
+    dalvik.vm.image-dex2oat-threads=4
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -77,6 +78,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=2048 \
+    debug.sf.use_phase_offsets_as_durations=1 \
+    debug.sf.late.sf.duration=10500000 \
+    debug.sf.late.app.duration=20500000 \
+    debug.sf.early.sf.duration=21000000 \
+    debug.sf.early.app.duration=16500000 \
+    debug.sf.earlyGl.sf.duration=13500000 \
+    debug.sf.earlyGl.app.duration=21000000 \
     ro.surface_flinger.protected_contents=true
 
 # Media
@@ -177,7 +185,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # ADB at boot
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.service.adb.enable=1 \
-persist.service.debuggable=1 \
-persist.sys.usb.config=mtp,adb \
-ro.adb.secure=0
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0
+
+# Charger
+PRODUCT_PROPERTY_OVERRIDES += \
+   ro.charger.enable_suspend=true

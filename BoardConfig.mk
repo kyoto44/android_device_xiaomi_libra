@@ -75,9 +75,6 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := /system/vendor/bin/mm-qcamera-daemon=22
 TARGET_USES_MEDIA_EXTENSIONS := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
-# Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
-
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
