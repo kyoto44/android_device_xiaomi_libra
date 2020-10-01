@@ -73,7 +73,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=1 \
     debug.sf.enable_gl_backpressure=1 \
-    debug.sf.latch_unsignaled=1 \
     ro.opengles.version=196610 \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
@@ -85,7 +84,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early.app.duration=16500000 \
     debug.sf.earlyGl.sf.duration=13500000 \
     debug.sf.earlyGl.app.duration=21000000 \
-    ro.surface_flinger.protected_contents=true
+    ro.surface_flinger.protected_contents=true \
+    debug.hwui.use_buffer_age=false
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -161,10 +161,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Video
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=c2d \
-    debug.egl.hw=1 \
     debug.mdpcomp.logs=0 \
-    debug.sf.hw=1 \
-    dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
     persist.hwc.mdpcomp.enable=true \
     persist.hwc.ptor.enable=true \
@@ -176,19 +173,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.debug.level=0 \
     vidc.enc.dcvs.extra-buff-count=2
 
-# Wireless display
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.debug.wfd.enable=1 \
-    persist.hwc.enable_vds=1 \
-    persist.sys.wfd.virtual=0 \
-    vendor.audio.tunnel.encode=false
-
 # ADB at boot
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.service.adb.enable=1 \
     persist.service.debuggable=1 \
-    persist.sys.usb.config=mtp,adb \
-    ro.adb.secure=0
+    persist.sys.usb.config=adb,mtp \
+    ro.adb.secure=1
 
 # Charger
 PRODUCT_PROPERTY_OVERRIDES += \
