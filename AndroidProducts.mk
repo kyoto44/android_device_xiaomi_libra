@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/revengeos_libra.mk
+    $(LOCAL_DIR)/derp_libra.mk
 
 COMMON_LUNCH_CHOICES := \
-    revengeos_libra-eng \
-    revengeos_libra-user \
-    revengeos_libra-userdebug
+    derp_libra-eng \
+    derp_libra-user \
+    derp_libra-userdebug
