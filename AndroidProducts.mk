@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_libra.mk
+    $(LOCAL_DIR)/yaap_libra.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_libra-eng \
-    derp_libra-user \
-    derp_libra-userdebug
+    yaap_libra-eng \
+    yaap_libra-user \
+    yaap_libra-userdebug
