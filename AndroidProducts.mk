@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_libra.mk
+    $(LOCAL_DIR)/revengeos_libra.mk
 
 COMMON_LUNCH_CHOICES := \
-    yaap_libra-eng \
-    yaap_libra-user \
-    yaap_libra-userdebug
+    revengeos_libra-eng \
+    revengeos_libra-user \
+    revengeos_libra-userdebug
