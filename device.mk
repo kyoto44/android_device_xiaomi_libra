@@ -80,8 +80,7 @@ PRODUCT_PACKAGES += \
     camera.msm8992 \
     libshim_atomic \
     libshim_camera \
-    Snap \
-    libqdutils
+    Snap
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -128,8 +127,7 @@ PRODUCT_PACKAGES += \
     libgenlock \
     liboverlay \
     libtinyxml \
-    memtrack.msm8992 \
-    libqdMetaData
+    memtrack.msm8992
 
 # Hardware
 PRODUCT_COPY_FILES += \
