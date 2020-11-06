@@ -221,7 +221,9 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
 # Power
-PRODUCT_PACKAGES += android.hardware.power-service-qti
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti \
+    android.hardware.power.stats@1.0-service.mock
 
 # Privapp Whitelist
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
@@ -340,4 +342,4 @@ PRODUCT_COPY_FILES += \
 
 # DumpState
 PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.1-service-kitakami      
+    android.hardware.dumpstate@1.1-service-libra    
