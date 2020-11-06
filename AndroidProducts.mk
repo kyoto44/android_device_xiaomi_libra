@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/revengeos_libra.mk
+    $(LOCAL_DIR)/evolution_libra.mk
 
 COMMON_LUNCH_CHOICES := \
-    revengeos_libra-eng \
-    revengeos_libra-user \
-    revengeos_libra-userdebug
+    evolution_libra-eng \
+    evolution_libra-user \
+    evolution_libra-userdebug
