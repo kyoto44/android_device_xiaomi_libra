@@ -222,10 +222,7 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
 # Power
-PRODUCT_PACKAGES += \
-    power.libra \
-    android.hardware.power@1.0-impl \
-    android.hardware.power@1.0-service
+PRODUCT_PACKAGES += android.hardware.power-service-qti
 
 # Privapp Whitelist
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
