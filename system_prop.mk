@@ -190,5 +190,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.first_wb_delay_mins=180 \
     ro.zram.periodic_wb_delay_hours=24
   
-# Traced  
-PRODUCT_PROPERTY_OVERRIDES += persist.traced.enable=0    
+# Disable traced and iorapd
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.iorapd.enable=false \
+	persist.traced.enable=0 
