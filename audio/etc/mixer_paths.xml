@@ -71,16 +71,6 @@
     <ctl name="SLIMBUS_4_RX Audio Mixer MultiMedia2" value="0" />
     <ctl name="MultiMedia5 Mixer SLIM_0_TX" value="0" />
     <ctl name="MultiMedia5 Mixer AFE_PCM_TX" value="0" />
-    <ctl name="MultiMedia4 Mixer MI2S_TX" value="0" />
-    <ctl name="MultiMedia1 Mixer MI2S_TX" value="0" />
-    <ctl name="MultiMedia7 Mixer MI2S_TX" value="0" />
-    <ctl name="MultiMedia10 Mixer MI2S_TX" value="0" />
-    <ctl name="MultiMedia11 Mixer MI2S_TX" value="0" />
-    <ctl name="MultiMedia12 Mixer MI2S_TX" value="0" />
-    <ctl name="MultiMedia13 Mixer MI2S_TX" value="0" />
-    <ctl name="MultiMedia14 Mixer MI2S_TX" value="0" />
-    <ctl name="MultiMedia15 Mixer MI2S_TX" value="0" />
-    <ctl name="MultiMedia16 Mixer MI2S_TX" value="0" />
     <ctl name="MultiMedia1 Mixer SLIM_0_TX" value="0" />
     <ctl name="MultiMedia1 Mixer SLIM_4_TX" value="0" />
     <ctl name="MultiMedia1 Mixer SEC_AUX_PCM_UL_TX" value="0" />
@@ -100,7 +90,6 @@
     <ctl name="HDMI Mixer MultiMedia16" value="0" />
     <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia2" value="0" />
-    <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia3" value="0" />
     <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia4" value="0" />
     <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia5" value="0" />
     <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia7" value="0" />
@@ -239,8 +228,6 @@
     <ctl name="SEC_AUX_PCM_RX Audio Mixer MultiMedia5" value="0" />
     <ctl name="SEC_AUX_PCM_RX Audio Mixer MultiMedia6" value="0" />
     <ctl name="MultiMedia1 Mixer SEC_AUX_PCM_UL_TX" value="0" />
-    <ctl name="RX4 DSM MUX" value="CIC_OUT" />
-    <ctl name="RX6 DSM MUX" value="CIC_OUT" />
     <ctl name="IIR1 Band1" id ="0" value="268435456" />
     <ctl name="IIR1 Band1" id ="1" value="0" />
     <ctl name="IIR1 Band1" id ="2" value="0" />
@@ -295,7 +282,6 @@
     <ctl name="MADONOFF Switch" value="0" />
     <ctl name="MAD Input" value="DMIC1" />
     <ctl name="AFE_PCM_RX Audio Mixer MultiMedia2" value="0" />
-    <ctl name="AFE_PCM_RX Port Mixer PRI_MI2S_TX" value="0" />
     <ctl name="Input Num Channel" value="0" />
     <ctl name="Output Num Channel" value="0" />
     <ctl name="Out Channel1" id="0" value="0" />
@@ -714,9 +700,6 @@
     <path name="audio-record-compress">
         <ctl name="MultiMedia8 Mixer SLIM_0_TX" value="1" />
     </path>
-    <path name="audio-record-compress bt-sco">
-        <ctl name="MultiMedia8 Mixer SEC_AUX_PCM_UL_TX" value="1" />
-    </path>
     <path name="audio-record-compress bt-sco-wb">
         <ctl name="AUX PCM SampleRate" value="16000" />
         <path name="audio-record-compress bt-sco" />
@@ -727,15 +710,9 @@
     <path name="low-latency-record">
         <ctl name="MultiMedia5 Mixer SLIM_0_TX" value="1" />
     </path>
-    <path name="low-latency-record bt-sco">
-        <ctl name="MultiMedia5 Mixer SEC_AUX_PCM_UL_TX" value="1" />
-    </path>
     <path name="low-latency-record bt-sco-wb">
         <ctl name="AUX PCM SampleRate" value="16000" />
         <path name="low-latency-record bt-sco" />
-    </path>
-    <path name="low-latency-record capture-fm">
-        <ctl name="MultiMedia5 Mixer PRI_MI2S_TX" value="1" />
     </path>
     <path name="fm-virtual-record capture-fm">
         <ctl name="MultiMedia2 Mixer PRI_MI2S_TX" value="1" />
