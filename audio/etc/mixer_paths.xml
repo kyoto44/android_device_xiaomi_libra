@@ -372,22 +372,6 @@
         <path name="low-latency-playback usb-headphones" />
         <path name="low-latency-playback" />
     </path>
-    <path name="audio-ull-playback">
-        <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia3" value="1" />
-    </path>
-    <path name="audio-ull-playback speaker">
-        <path name="audio-ull-playback" />
-    </path>
-    <path name="audio-ull-playback speaker-protected">
-        <path name="audio-ull-playback" />
-    </path>
-    <path name="audio-ull-playback headphones">
-        <path name="audio-ull-playback" />
-    </path>
-    <path name="audio-ull-playback speaker-and-headphones">
-        <path name="audio-ull-playback" />
-        <path name="audio-ull-playback headphones" />
-    </path>
     <path name="audio-ull-playback hdmi">
         <ctl name="HDMI Mixer MultiMedia3" value="1" />
     </path>
@@ -400,7 +384,6 @@
     </path>
     <path name="audio-ull-playback speaker-and-hdmi">
         <path name="audio-ull-playback hdmi" />
-        <path name="audio-ull-playback" />
     </path>
     <path name="audio-ull-playback afe-proxy">
         <ctl name="AFE_PCM_RX Audio Mixer MultiMedia3" value="1" />
@@ -410,7 +393,6 @@
     </path>
     <path name="audio-ull-playback speaker-and-usb-headphones">
         <path name="audio-ull-playback usb-headphones" />
-        <path name="audio-ull-playback" />
     </path>
     <path name="multi-channel-playback hdmi">
         <ctl name="HDMI Mixer MultiMedia2" value="1" />
@@ -702,7 +684,6 @@
     </path>
     <path name="audio-record-compress bt-sco-wb">
         <ctl name="AUX PCM SampleRate" value="16000" />
-        <path name="audio-record-compress bt-sco" />
     </path>
     <path name="audio-record-compress usb-headset-mic">
         <ctl name="MultiMedia8 Mixer AFE_PCM_TX" value="1" />
@@ -712,7 +693,6 @@
     </path>
     <path name="low-latency-record bt-sco-wb">
         <ctl name="AUX PCM SampleRate" value="16000" />
-        <path name="low-latency-record bt-sco" />
     </path>
     <path name="fm-virtual-record capture-fm">
         <ctl name="MultiMedia2 Mixer PRI_MI2S_TX" value="1" />
@@ -1314,7 +1294,6 @@
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
-        <ctl name="RDAC3 MUX" value="DEM2" />
         <ctl name="DAC1 Switch" value="1" />
         <ctl name="EAR PA Gain" value="POS_6_DB" />
         <ctl name="RX1 Digital Volume" value="84" />
