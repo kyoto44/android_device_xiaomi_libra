@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_libra.mk
+    $(LOCAL_DIR)/superior_libra.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_libra-eng \
-    evolution_libra-user \
-    evolution_libra-userdebug
+    superior_libra-eng \
+    superior_libra-user \
+    superior_libra-userdebug
