@@ -43,3 +43,9 @@ rm -rf /data/media/0/*/.thumbnails/*
 rm -rf /data/media/0/Android/data/*/cache/*
 rm -rf /data/user_de/*/*/cache/*
 rm -rf /data/user_de/*/*/code_cache/*
+
+# Enable ADB root when needed
+if [ $(cat /data/adbroot/enabled) -gt 0 ]; then
+    setprop service.adb.root 1
+    setprop ctl.restart adbd
+fi

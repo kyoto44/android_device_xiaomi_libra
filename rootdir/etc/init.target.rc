@@ -36,29 +36,9 @@ on post-fs
     # We restorecon /cust in case the cust partition has been reset.
     restorecon_recursive /cust
 
-    # Allow writing to the kernel trace log.
-    chmod 0222 /sys/kernel/debug/tracing/trace_marker
-    
     # Create the lost+found directories, so as to enforce our permissions
     mkdir /cust/lost+found 0770 root root
 
-service logger /system/bin/logcat -b all -D -f /data/boot_log.txt
-    class main
-    user root
-    group root system
-    disabled
-    oneshot
-
-on post-fs-data
-    
-    # Clear existing log and start the service
-    rm /data/boot_log.txt
-    start logger
-
-    mkdir /persist/data/sfs 0700 system system
-    mkdir /persist/data/tz 0700 system system
-    mkdir /data/usf 0700 system system
-    mkdir /data/misc/dts 0770 media audio
     # Some files in /sys/devices/system/cpu are created after the restorecon of /sys which receive the default label "sysfs".
     # Restorecon again to give new files the correct label.
     restorecon_recursive /sys/devices/system/cpu
@@ -141,6 +121,13 @@ service fidodaemon /system/vendor/bin/fidodaemon
     user system
     group system
 
+service logger /system/bin/logcat -b all -D -f /data/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
 service per_mgr /vendor/bin/pm-service
     class core
     user system
@@ -209,7 +196,6 @@ on property:ro.product.ramsize=2g
     swapon_all /vendor/etc/fstab.qcom
 
 on property:sys.boot_completed=1
-    stop logger
     # Disable KTM core control before configuring scheduler
     write /sys/module/msm_thermal/core_control/enabled 0
     write /sys/devices/system/cpu/cpu4/online 1
@@ -238,6 +224,10 @@ on property:sys.boot_completed=1
     write /sys/class/devfreq/qcom,cpubw.27/governor bw_hwmon
     write /sys/class/devfreq/qcom,mincpubw.28/governor cpufreq
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 7
+
+    # Stop the logger service
+    rm /data/boot_log.txt
+    stop logger
 
 on property:sys.shutdown.requested=*
     stop per_proxy
