@@ -243,7 +243,7 @@
             <instance>cnd</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <!-- <hal format="hidl">
         <name>vendor.lineage.livedisplay</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -264,5 +264,5 @@
             <name>IUsbRestrict</name>
             <instance>default</instance>
         </interface>
-    </hal>
+    </hal> -->
 </manifest>

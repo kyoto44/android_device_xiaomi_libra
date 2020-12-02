@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_libra.mk
+    $(LOCAL_DIR)/evolution_libra.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_libra-eng \
-    lineage_libra-user \
-    lineage_libra-userdebug
+    evolution_libra-eng \
+    evolution_libra-user \
+    evolution_libra-userdebug

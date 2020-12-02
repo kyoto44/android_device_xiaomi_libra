@@ -343,13 +343,4 @@ PRODUCT_PACKAGES += \
 
 # DumpState
 PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.1-service-libra    
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-legacymm \
-    vendor.lineage.livedisplay@2.0-service-sysfs
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service        
+    android.hardware.dumpstate@1.1-service-libra        
