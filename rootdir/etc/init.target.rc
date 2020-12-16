@@ -43,6 +43,11 @@ on post-fs
     # Restorecon again to give new files the correct label.
     restorecon_recursive /sys/devices/system/cpu
 
+on post-fs-data
+    # Clear existing log and start the service
+    rm /data/boot_log.txt
+    start logger
+
 on early-boot
     write /sys/bus/i2c/devices/2-004a/update_fw 1
     write /sys/bus/i2c/devices/2-004a/update_cfg 1
