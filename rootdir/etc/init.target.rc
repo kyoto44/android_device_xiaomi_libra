@@ -176,6 +176,9 @@ on property:init.svc.media=restarting
 on property:init.svc.per_mgr=running
     start per_proxy
 
+on property:init.svc.per_mgr=stopped
+    stop per_proxy
+
 on property:init.svc.servicemanager=restarting
     restart qcamerasvr
 
@@ -231,6 +234,3 @@ on property:sys.boot_completed=1
     # Stop the logger service
     rm /data/boot_log.txt
     stop logger
-
-on property:sys.shutdown.requested=*
-    stop per_proxy
