@@ -177,6 +177,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:system/vendor/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/vendor/etc/permissions/handheld_core_hardware.xml
 
+# IR
+PRODUCT_PACKAGES += android.hardware.ir@1.0-service.xiaomi
+
 # IRQ
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
@@ -197,6 +200,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
+
+# Legacy libs for compatibility
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder
 
 # Lights
 PRODUCT_PACKAGES += android.hardware.light@2.0-service.xiaomi_msm8994
